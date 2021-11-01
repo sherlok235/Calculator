@@ -1,23 +1,38 @@
 #include <iostream>
 #include "ecuation.h"
-//#include "parser.h"
-using namespace std;
+
+using std::cout;
+using std::endl;
+using std::cin;
+
+void StartMessage();
+void FinishMessage();
 
 int main()
 {
+   string str_input;
    ecuation ec;
-   ec="56+2";
-   cout<<ec.GetResult();
 
-   return 0;
+   StartMessage();
+
+   while(1){
+
+       cout<<"input: ";
+       cin>>str_input;
+
+       if (str_input[0] == '%'){
+           FinishMessage();
+          return 0;
+       }
+
+       ec=str_input;
+       cout<<"Result: "<<ec.GetResult()<<endl;
+   }
 }
-
-//int - i
-//long - l
-//long long -x
-//unsigned - j
-//unsigned long - m
-//unsigned long long - y
-//double - d
-//long double - e
-//float - f
+void StartMessage(){
+    cout<<"     ---------- This is a calculator ----------\n";
+    cout<<"     -------- Hi is made by sherlok235 --------\n";
+}
+void FinishMessage(){
+    cout<<"By\n";
+}
