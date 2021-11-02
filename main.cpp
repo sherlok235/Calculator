@@ -31,7 +31,8 @@ int main()
 }
 void StartMessage(){
     cout<<"     ---------- This is a calculator ----------\n";
-    cout<<"     -------- Hi is made by sherlok235 --------\n";
+    cout<<"     -------- This is made by sherlok235 --------\n";
+    cout<<"     ------------ For exit input % -------------\n";
 }
 void FinishMessage(){
     cout<<"By\n";
