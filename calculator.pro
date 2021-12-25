@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        ecuation.cpp \
+        expresion.cpp \
         main.cpp \
         parser.cpp
 
 HEADERS += \
-    ecuation.h \
+    expresion.h \
     parser.h

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ecuation.h"
+#include "expresion.h"
 
 using std::cout;
 using std::endl;
@@ -11,7 +11,7 @@ void FinishMessage();
 int main()
 {
    string str_input;
-   ecuation ec;
+   expresion ec;
 
    StartMessage();
 

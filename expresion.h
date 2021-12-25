@@ -1,21 +1,21 @@
-#ifndef ECUATION_H
-#define ECUATION_H
+#ifndef EXPRESION_H
+#define EXPRESION_H
 
 #include "parser.h"
 
 enum Sign {add=0,less,multiply,divide,none};
 
-class ecuation
+class expresion
 {
 private:
     Sign Operation=Sign::add;
     double number1,number2;
     Parser pars;
 public:
-      ecuation();
-      ecuation(string input);
-      ecuation(double num1,double num2);
-      ecuation(double num1,Sign oper,double num2);
+      expresion();
+      expresion(string input);
+      expresion(double num1,double num2);
+      expresion(double num1,Sign oper,double num2);
 
       void setOperation(Sign oper);
       void setOperation(string temp);
@@ -26,4 +26,4 @@ public:
 
 };
 
-#endif // ECUATION_H
+#endif // EXPRESION_H

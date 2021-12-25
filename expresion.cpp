@@ -1,9 +1,9 @@
-#include "ecuation.h"
+#include "expresion.h"
 
-ecuation::ecuation():
+expresion::expresion():
     Operation(none),number1(0),number2(0) {}
 
-ecuation::ecuation(std::string input):pars(input)
+expresion::expresion(std::string input):pars(input)
 {
     Data temp = pars.Pars();
     number1 = temp.num1;
@@ -11,18 +11,18 @@ ecuation::ecuation(std::string input):pars(input)
     this->setOperation(temp.sign);
 }
 
-ecuation::ecuation(double num1, double num2):
+expresion::expresion(double num1, double num2):
     number1(num1),number2(num2) {}
 
-ecuation::ecuation(double num1, Sign oper, double num2):
+expresion::expresion(double num1, Sign oper, double num2):
     Operation(oper),number1(num1),number2(num2) {}
 
-void ecuation::setOperation(Sign oper)
+void expresion::setOperation(Sign oper)
 {
     Operation = oper;
 }
 
-void ecuation::setOperation(std::string temp)
+void expresion::setOperation(std::string temp)
 {
     switch (temp[0]) {
     case '+':
@@ -40,7 +40,7 @@ void ecuation::setOperation(std::string temp)
     }
 }
 
-double ecuation::GetResult()
+double expresion::GetResult()
 {
     switch(Operation){
     case add:
@@ -60,7 +60,7 @@ double ecuation::GetResult()
     }
 }
 
-void ecuation::operator=(const std::string &input)
+void expresion::operator=(const std::string &input)
 {
     pars.setStr(input);
     Data temp = pars.Pars();

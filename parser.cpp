@@ -1,12 +1,12 @@
 #include "parser.h"
 
-Parser::Parser():StrEcuation(""){}
+Parser::Parser():StrExpresion(""){}
 
-Parser::Parser(std::string input_data):StrEcuation(input_data){}
+Parser::Parser(std::string input_data):StrExpresion(input_data){}
 
 void Parser::setStr(std::string input)
 {
-    this->StrEcuation=input;
+    this->StrExpresion=input;
 }
 
 Data Parser::Pars()
@@ -14,22 +14,22 @@ Data Parser::Pars()
     Data temp;
     string num1="",num2="";
     bool first=false;
-    int size =StrEcuation.size();
+    int size =StrExpresion.size();
 for(int i=0; i<size;i++){
-    switch (StrEcuation[i]) {
+    switch (StrExpresion[i]) {
     case '+':
     case '/':
     case '-':
     case '*':
-        temp.sign=StrEcuation[i];
+        temp.sign=StrExpresion[i];
         first=true;
         break;
     default:
         if (!first){
-        num1+=StrEcuation[i];
+        num1+=StrExpresion[i];
         }
         else{
-            num2+=StrEcuation[i];
+            num2+=StrExpresion[i];
         }
         break;
     }

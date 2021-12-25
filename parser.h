@@ -15,7 +15,7 @@ class Parser
 {
 private:
 
-    string StrEcuation;
+    string StrExpresion;
 public:
     Parser();
     Parser(string input_data);
