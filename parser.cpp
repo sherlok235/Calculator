@@ -15,27 +15,27 @@ Data Parser::Pars()
     string num1="",num2="";
     bool first=false;
     int size =StrExpresion.size();
-for(int i=0; i<size;i++){
-    switch (StrExpresion[i]) {
-    case '+':
-    case '/':
-    case '-':
-    case '*':
-        temp.sign=StrExpresion[i];
-        first=true;
-        break;
-    default:
-        if (!first){
-        num1+=StrExpresion[i];
+    for(int i=0; i<size;i++){
+        switch (StrExpresion[i]) {
+        case '+':
+        case '/':
+        case '-':
+        case '*':
+            temp.sign=StrExpresion[i];
+            first=true;
+            break;
+        default:
+            if (!first){
+            num1+=StrExpresion[i];
+            }
+            else{
+                num2+=StrExpresion[i];
+            }
+            break;
         }
-        else{
-            num2+=StrExpresion[i];
-        }
-        break;
     }
-}
-temp.num1=std::stod(num1);
-temp.num2=std::stod(num2);
+    temp.num1=std::stod(num1);
+    temp.num2=std::stod(num2);
 
-return temp;
+    return temp;
 }
