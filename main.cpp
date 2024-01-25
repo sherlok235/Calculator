@@ -25,7 +25,7 @@ int main()
           return 0;
        }
 
-       ec=str_input;
+       ec = str_input;
        cout<<"Result: "<<ec.GetResult()<<endl;
    }
 }
